@@ -3,38 +3,69 @@
 <head>
   <title>Sagea Natural</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+<script src="script.js"></script>
 <body>
 
-    <header class="hero">
+    <!-- HERO -->
+    <section class="hero">
       <h1>Sagea Natural</h1>
-      <p>Pure • Calm • Natural Living</p>
-    </header>
-  
-    <section class="products">
+      <p>Natural Products for a Healthier, Calmer Life</p>
+      <a href="https://wa.me/6285736530544" class="cta">Order via WhatsApp</a>
+    </section>
+    <!-- PROBLEM -->
+    <section class="problem fade-slide" data-delay="0">
+        <h2>Struggling with harsh chemical products?</h2>
+        <p>Many skincare products contain ingredients that damage your skin over time.</p>
+      </section>
+      <!-- SOLUTION -->
+      <section class="solution fade-slide" data-delay="200">
+        <h2>Switch to Natural Care</h2>
+        <p>Sagea provides gentle, handmade products made from natural ingredients.</p>
+      </section>
+      <!--HIGHLIGHT-->
+      <section class="highlight fade-slide" data-delay="400">
+        <h2>Pure. Natural. Safe.</h2>
+        <p>Crafted with care to bring balance and calm into your daily life.</p>
+      </section>
+    <!-- PRODUCTS -->
+    <section class="products container">
   
       <div class="card">
-        <img src="images/soap.jpg" alt="Soap">
-        <h2>Natural Soap</h2>
+        <img src="images/soap.jpg">
+        <h2>Gentle Soap for Sensitive Skin</h2>
         <p class="price">Rp 70.000</p>
         <p>Handmade with organic ingredients</p>
-        <a href="https://wa.me/6285736530544?text=Saya%20mau%20order%20Natural%20Soap">Order Now</a>
+        <a href="#" onclick="orderProduct('Natural Soap')">Order Now</a>
       </div>
   
       <div class="card">
-        <img src="images/candle.jpg" alt="Candle">
-        <h2>Aromatherapy Candle</h2>
+        <img src="images/candle.jpg">
+        <h2>Relaxing Candle for Better Sleep</h2>
         <p class="price">Rp 35.000</p>
         <p>Relax your mind with natural scent</p>
-        <a href="https://wa.me/6285736530544?text=Halo%20saya%20tertarik%20dengan%20produk%20Sagea">Order Now</a>
+        <a href="#" onclick="orderProduct('Candle')">Order Now</a>
       </div>
   
     </section>
-  
-    <section class="about">
-      <h2>About Sagea</h2>
-      <p>We create natural products that bring calmness and balance into your daily life.</p>
+    <!-- TRUST -->
+    <section class="trust">
+        <h2>Why Customers Love Sagea</h2>
+        <p>✔ 100% natural ingredients</p>
+        <p>✔ Handmade with care</p>
+        <p>✔ Safe for daily use</p>
+      </section>
+     <!-- TESTIMONIAL --> 
+    <section class="testimonial">
+        <h2>What Our Customers Say</h2>
+        <p>"Sabunnya lembut banget di kulit!"</p>
+        <p>"Wangi lilinnya bikin rileks!"</p>
     </section>
-  
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Sagea Natural</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
