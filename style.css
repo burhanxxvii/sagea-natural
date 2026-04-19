@@ -21,6 +21,13 @@ body {
     margin-top: 10px;
     font-size: 18px;
   }
+
+@media (max-width: 768px) {
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+}
   
   .products {
     display: flex;
