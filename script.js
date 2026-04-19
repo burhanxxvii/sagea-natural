@@ -5,15 +5,15 @@ function orderProduct(productName) {
     );
   }
   
-  // SCROLL ANIMATION (FIX)
+  // FIX SCROLL ANIMATION
   const elements = document.querySelectorAll('.fade-slide');
   
-  function checkScroll() {
+  function revealOnScroll() {
     elements.forEach(el => {
       const rect = el.getBoundingClientRect();
       const windowHeight = window.innerHeight;
   
-      if (rect.top < windowHeight - 100) {
+      if (rect.top < windowHeight - 50) {
         const delay = el.dataset.delay || 0;
   
         setTimeout(() => {
@@ -23,8 +23,8 @@ function orderProduct(productName) {
     });
   }
   
-  // Jalankan saat load
-  window.addEventListener('load', checkScroll);
+  // jalan saat pertama load
+  window.addEventListener('load', revealOnScroll);
   
-  // Jalankan saat scroll
-  window.addEventListener('scroll', checkScroll);
+  // jalan saat scroll
+  window.addEventListener('scroll', revealOnScroll);
