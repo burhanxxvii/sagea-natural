@@ -69,3 +69,9 @@ body {
     text-align: center;
     padding: 40px 20px;
   }
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6b8f71;
+  margin: 5px 0;
+}
