@@ -6,41 +6,48 @@ body {
     color: #333;
   }
   
-  section {
-    padding: 50px 20px;
-  }
-  
-  .container {
-    max-width: 1100px;
-    margin: auto;
-  }
-  
   /* HERO */
   .hero {
+    position: sticky;
+    top: 0;
+    height: 280px;
+  
     background: #a8c3a0;
     color: white;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
     text-align: center;
-    padding: 80px 20px;
+    z-index: 2;
   }
   
-  .hero h1 {
-    margin: 0;
-    font-size: 42px;
+  /* FLOW SECTIONS (LEWAT DI BAWAH HERO) */
+  .problem,
+  .solution,
+  .highlight {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
   }
   
-  .hero p {
-    margin: 10px 0 20px;
-    font-size: 18px;
-  }
+  /* WARNA FLOW */
+  .problem { background: #f0f5f0; }
+  .solution { background: #ffffff; }
+  .highlight { background: #eef3ee; }
   
-  .cta {
-    background: white;
-    color: #6b8f71;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  /* === SECTION SETELAH HERO (UNIFIED) === */
+  .products,
+  .trust,
+  .testimonial {
+    position: relative;
+    z-index: 5;
+    padding: 60px 20px;
   }
   
   /* PRODUCTS */
@@ -49,8 +56,27 @@ body {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+  
+    background: #f7f9f7;
+    margin-top: -80px; /* lebih halus dari -100px */
   }
   
+  /* TRUST */
+  .trust {
+    background: #eef3ee;
+    text-align: center;
+    margin: auto;
+  }
+  
+  /* TESTIMONIAL */
+  .testimonial {
+    background: #f7f9f7;
+    text-align: center;
+    margin: auto;
+    font-style: italic;
+  }
+  
+  /* CARD */
   .card {
     background: white;
     border-radius: 15px;
@@ -76,30 +102,14 @@ body {
     color: #6b8f71;
   }
   
-  /* SECTIONS */
-  .problem, .solution, .highlight, .trust, .testimonial {
-    text-align: center;
-  }
-  
-  .problem {
-    background: #f0f5f0;
-  }
-  
-  .solution {
-    background: #ffffff;
-  }
-  
-  .highlight {
-    background: #eef3ee;
-  }
-  
-  .trust {
-    background: #f7f9f7;
-  }
-  
-  .testimonial {
-    background: #eef3ee;
-    font-style: italic;
+  /* CTA */
+  .cta {
+    background: white;
+    color: #6b8f71;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
   }
   
   /* FOOTER */
@@ -107,16 +117,7 @@ body {
     background: #333;
     color: white;
     text-align: center;
-    padding: 15px;
-  }
-  
-  /* LINKS */
-  a {
-    transition: all 0.3s ease;
-  }
-  
-  a:hover {
-    opacity: 0.8;
+    padding: 20px;
   }
   
   /* RESPONSIVE */
@@ -126,15 +127,3 @@ body {
       align-items: center;
     }
   }
-  
-  /* SCROLL ANIMATION */
-  .fade-slide {
-    opacity: 0;
-    transform: translateX(60px);
-    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  
-  .fade-slide.show {
-    opacity: 1;
-    transform: translateX(0);
-  } 
